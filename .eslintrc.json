@@ -5,7 +5,9 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "xo"
+        "xo",
+        "eslint:recommended",
+		"plugin:@typescript-eslint/recommended"
     ],
     "overrides": [
         {
@@ -18,13 +20,17 @@
             ]
         }
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "@typescript-eslint"
     ],
     "rules": {
+        "react/prop-types": "off",
+		"@typescript-eslint/explicit-function-return-type": "off"
     }
 }
